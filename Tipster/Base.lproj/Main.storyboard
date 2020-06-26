@@ -23,7 +23,7 @@
                                 <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xX-cG-nmw">
-                                <rect key="frame" x="50" y="505" width="94" height="60"/>
+                                <rect key="frame" x="50" y="505" width="194" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -74,6 +74,8 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="onEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="HZP-qu-7CT"/>
+                                    <action selector="onEditingEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="MnV-4I-9yv"/>
+                                    <action selector="onEditingStart:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="bTT-Ha-bwl"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -90,6 +92,7 @@
                         <outlet property="tipControl" destination="SXq-pd-us4" id="jpe-qB-9d7"/>
                         <outlet property="tipLabel" destination="MQK-Gy-JpB" id="uVS-Ig-pVI"/>
                         <outlet property="totalLabel" destination="xO2-VL-wLH" id="ql0-VZ-7Fr"/>
+                        <outlet property="totalPhraseLabel" destination="5xX-cG-nmw" id="GNH-7o-GKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

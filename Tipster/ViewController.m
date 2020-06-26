@@ -18,6 +18,8 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
 
+@property (weak, nonatomic) IBOutlet UILabel *totalPhraseLabel;
+
 @end
 
 @implementation ViewController
@@ -31,6 +33,8 @@
     NSLog(@"Hello");
     //Hiding Keyboard on tap
     [self.view endEditing:YES];
+    
+    
 }
 
 - (IBAction)onEdit:(id)sender {
@@ -45,5 +49,22 @@
     self.totalLabel.text = [NSString stringWithFormat:@"$ %.2f", total];
 }
 
+- (IBAction)onEditingStart:(id)sender {
+    self.totalLabel.alpha=0;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.totalPhraseLabel.text= @"Total...";        self.totalLabel.frame=CGRectMake(self.totalLabel.frame.origin.x, self.totalLabel.frame.origin.y-30, self.totalLabel.frame.size.width, self.totalLabel.frame.size.height);
+        
+    }];
+    
+}
+- (IBAction)onEditingEnd:(id)sender {
+    CGRect newFrame = self.totalLabel.frame;
+    newFrame.origin.y+=30;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.totalLabel.frame=newFrame;
+        self.totalLabel.alpha=1;
+         self.totalPhraseLabel.alpha=1;self.totalPhraseLabel.text= @"Total";    }];
+}
 
 @end
