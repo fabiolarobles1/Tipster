@@ -2,7 +2,7 @@
 
 **Tipster** is a tip calculator application for iOS.
 
-Submitted by: **Fabiola E. RObles Vega**
+Submitted by: **Fabiola E. Robles Vega**
 
 Time spent: **4** hours spent in total
 
@@ -34,7 +34,8 @@ GIF created with [Recordit](https://recordit.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Just made the required features because I am short on time since I received my tech yesterday's afternoon.
+When I get back on track with the course, I am planning to implement the other features as a way to learn more.
 
 ## Credits
 
