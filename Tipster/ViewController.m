@@ -30,7 +30,6 @@
 }
 
 - (IBAction)onTap:(id)sender {
-    NSLog(@"Hello");
     //Hiding Keyboard on tap
     [self.view endEditing:YES];
     
@@ -53,7 +52,11 @@
     self.totalLabel.alpha=0;
     
     [UIView animateWithDuration:0.3 animations:^{
-        self.totalPhraseLabel.text= @"Total...";        self.totalLabel.frame=CGRectMake(self.totalLabel.frame.origin.x, self.totalLabel.frame.origin.y-30, self.totalLabel.frame.size.width, self.totalLabel.frame.size.height);
+        self.totalPhraseLabel.text= @"Total...";
+        self.totalLabel.frame=CGRectMake(self.totalLabel.frame.origin.x,
+                                         self.totalLabel.frame.origin.y-30,
+                                         self.totalLabel.frame.size.width,
+                                         self.totalLabel.frame.size.height);
         
     }];
     
@@ -64,7 +67,8 @@
     [UIView animateWithDuration:0.3 animations:^{
         self.totalLabel.frame=newFrame;
         self.totalLabel.alpha=1;
-         self.totalPhraseLabel.alpha=1;self.totalPhraseLabel.text= @"Total";    }];
+        self.totalPhraseLabel.alpha=1;self.totalPhraseLabel.text= @"Total";
+    }];
 }
 
 @end
