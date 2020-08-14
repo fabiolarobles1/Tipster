@@ -18,15 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
 }
+
+
 - (IBAction)onTapScreen:(id)sender {
     //Hiding Keyboard on tap
        [self.view endEditing:YES];
 }
+
+
 - (IBAction)onEdit:(id)sender {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
